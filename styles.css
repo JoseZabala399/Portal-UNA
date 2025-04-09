@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'RockSalt-Regular';
-    src: url('fonts/RockSalt-Regular.ttf') format('truetype'); /* Ajusta la ruta según la ubicación de tu fuente */
+    src: url('fonts/RockSalt-Regular.ttf') format('truetype'); 
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 }
 
 .contenido {
-    background-image: url('images/catedral.jpg'); 
+    background-image:url('images/catedral.jpg'); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -267,6 +267,122 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    header {
+        text-align: center;
+        padding: 10px;
+    }
+
+    header img {
+        width: 100px;
+        height: auto;
+    }
+
+    .horizontal-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .horizontal-menu > li {
+        width: 100%;
+    }
+
+    .horizontal-menu > li > a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .vertical-menu {
+        position: static;
+        width: 100%;
+        display: none;
+    }
+
+    .horizontal-menu li:hover .vertical-menu {
+        display: block;
+    }
+
+    .contenido {
+        padding: 10px;
+    }
+
+    .footer-frase, .footer-credito {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .contacto-btn a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+        padding: 10px;
+    }
+
+    header img {
+        width: 80px;
+        height: auto;
+    }
+
+    .horizontal-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .horizontal-menu > li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .vertical-menu {
+        position: static;
+        display: block;
+        text-align: center;
+    }
+
+    .vertical-menu li {
+        margin-bottom: 5px;
+    }
+
+    .vertical-menu li button {
+        width: 90%;
+    }
+
+    .contenido {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .footer-frase,
+    .footer-credito {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .contacto-btn a {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
 }
 
 
