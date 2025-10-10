@@ -5,6 +5,12 @@
     --text-color: #333;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 @font-face {
     font-family: 'RockSalt-Regular';
     src: url('fonts/RockSalt-Regular.ttf') format('truetype'); 
@@ -23,6 +29,7 @@ body {
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
+	
     min-height: 900px; 
     padding: 20px; 
 }
@@ -30,7 +37,7 @@ body {
 header {
     background-color: #ffffff;
     color: blue;
-    padding: 10px 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -63,6 +70,10 @@ nav {
     color: blue;
     padding: 10px;
     text-align: center;
+}
+
+nav {
+  box-shadow: 0 8px 12px -6px rgba(0, 91, 170, 0.5);
 }
 
 nav ul {
@@ -409,12 +420,7 @@ body {
 .has-sub-submenu:hover .sub-submenu {
     display: block;
 }
-/* --- Tus estilos actuales --- */
-/* Aquí irían tus estilos que ya tienes definidos para desktop,
-   como los de header, nav, botones, menús, etc. */
 
-/* ----------------------------- */
-/* --- ESTILOS RESPONSIVE --- */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -495,7 +501,7 @@ body {
     }
 }
 @media (max-width: 768px) {
-  /* Ajusta el contenedor principal */
+  
   .contenedor {
     padding: 10px;
     margin: 0 auto;
@@ -503,7 +509,7 @@ body {
     box-sizing: border-box;
   }
 
-  /* Encabezado y logo */
+  
   header img {
     width: 100%;
     max-width: 300px;
@@ -512,7 +518,7 @@ body {
     margin: 0 auto;
   }
 
-  /* Menú superior */
+  
   nav ul {
     flex-direction: column;
     align-items: center;
@@ -532,7 +538,7 @@ body {
     font-size: 16px;
   }
 
-  /* Submenús */
+  
   nav ul li ul {
     position: static;
     background-color: #333;
@@ -545,7 +551,7 @@ body {
   }
 
   nav ul li:hover > ul {
-    display: none; /* Evita hover en móviles */
+    display: none; 
   }
 
   nav ul li:focus-within > ul,
@@ -553,7 +559,7 @@ body {
     display: block;
   }
 
-  /* Botones azules */
+  
   .boton-azul {
     width: 90%;
     font-size: 14px;
@@ -561,13 +567,13 @@ body {
     padding: 10px;
   }
 
-  /* Imagen de fondo */
+  
   body {
     background-size: cover;
     background-position: center;
   }
 
-  /* Footer y redes */
+  
   footer {
     flex-direction: column;
     align-items: center;
@@ -587,7 +593,7 @@ body {
   }
 }
 header img {
-  max-height: 180px; /* Ajusta este valor según tu preferencia */
+  max-height: 180px; 
   height: auto;
   width: auto;
 }
@@ -629,7 +635,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Para que se acomode en móvil si no cabe */
+  flex-wrap: wrap; 
   gap: 10px;
   padding: 10px 0;
 }
@@ -696,7 +702,6 @@ header {
 }
 
 header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -705,7 +710,7 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Logo dentro del header */
+
 header img {
   width: 180px;
   height: auto;
@@ -714,14 +719,14 @@ header img {
   max-width: 100%;
 }
 
-/* Menú dentro del header */
+
 header nav {
   background-color: #005baa;
   padding: 10px 0;
   text-align: center;
 }
 
-/* Ítems del menú */
+
 header nav ul {
   list-style: none;
   margin: 0;
@@ -740,15 +745,29 @@ header nav ul li a {
   padding: 8px 12px;
 }
 
-/* Espacio para el contenido debajo del header fijo */
+
 main, .contenido, .seccion-principal {
-  margin-top: 150px; /* Ajusta según el alto real del header */
+  margin-top: 0px; 
 }
 
-/* Aviso de página en construcción */
+
 .aviso {
-  font-size: 18px;
+  font-size: 12px;
   color: red;
   text-align: center;
   margin: 20px 0;
 }
+
+
+nav ul li ul.sub-submenu {
+  max-height: 300px;     
+  overflow-y: auto;      
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 5px 0;
+  border-radius: 4px;
+}
+
+
+
+
