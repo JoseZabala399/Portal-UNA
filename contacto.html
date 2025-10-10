@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Universidad Nacional Abierta</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(180deg, #ffffff, #e8f1ff);
+        }
+
+        .contenedor-contacto {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            background-color: #0056b3;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0078d7;
+        }
+
+        .mensaje {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-contacto">
+        <h2>Formulario de Contacto</h2>
+        <p>Complete el siguiente formulario para solicitar información sobre alguna carrera.</p>
+
+        <form id="formContacto">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="carrera">Carrera de interés:</label>
+            <select id="carrera" name="carrera" required>
+                <option value="">Seleccione una carrera</option>
+                <option>Ingeniería de Sistemas</option>
+                <option>Ingeniería Industrial</option>
+                <option>Educación</option>
+                <option>Administración</option>
+				<option>Contaduria</option>
+				<option>TSU en Mantenimiento Informatico</option>
+            </select>
+
+            <label for="mensaje">Mensaje adicional:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escriba su consulta aquí..."></textarea>
+
+            <button type="submit">Enviar solicitud</button>
+        </form>
+
+        <div class="mensaje" id="mensajeConfirmacion">
+            ✅ Su solicitud ha sido enviada correctamente. Nos pondremos en contacto pronto.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("formContacto").addEventListener("submit", function(e){
+            e.preventDefault();
+            document.getElementById("mensajeConfirmacion").style.display = "block";
+            this.reset();
+        });
+    </script>
+</body>
+</html>
