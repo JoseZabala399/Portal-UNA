@@ -5,6 +5,73 @@
   <title>Recuperación de Contraseña</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* === Fondo azul degradado === */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:  #004aad;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* === Formulario === */
+    .form-recuperacion {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f3f3f3;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      color: #004aad;
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input:invalid {
+      border-color: red;
+    }
+
+    input:valid {
+      border-color: green;
+    }
+
+    /* === Botón blanco con letras azules === */
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ffffff;
+      color: #004aad;
+      border: 2px solid #004aad;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #004aad;
+      color: white;
+    }
+
+    /* === Mensajes === */
     .mensaje-exito {
       color: green;
       font-weight: bold;
@@ -16,31 +83,16 @@
       color: red;
       font-size: 14px;
     }
-
-    input:invalid {
-      border-color: red;
-    }
-
-    input:valid {
-      border-color: green;
-    }
-
-    .form-recuperacion {
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-      background: #f3f3f3;
-      border-radius: 10px;
-    }
   </style>
 </head>
+
 <body>
   <div class="form-recuperacion">
     <h2>Recuperación de Contraseña</h2>
     <form id="formRecuperacion">
       <label for="email">Correo electrónico:</label><br>
       <input type="email" id="email" name="email" required><br>
-      <span class="error" id="emailError"></span><br><br>
+      <span class="error" id="emailError"></span><br>
       <button type="submit">Enviar enlace</button>
     </form>
     <div class="mensaje-exito" id="mensajeExito">✅ Se ha enviado un enlace de recuperación a tu correo.</div>
@@ -49,3 +101,4 @@
   <script src="recuperacion.js"></script>
 </body>
 </html>
+
