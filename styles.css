@@ -768,6 +768,74 @@ nav ul li ul.sub-submenu {
   border-radius: 4px;
 }
 
+.logo-una {
+  width: 150px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: aparecerLogo 2s ease forwards;
+}
 
+@keyframes aparecerLogo {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.una {
+  font-weight: bold;
+  color: #003366; /* Azul institucional */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecerTexto 2s ease forwards;
+  animation-delay: 1s; /* empieza un poco después del logo */
+}
+
+@keyframes aparecerTexto {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.centro-local {
+  color: #0055aa;
+  opacity: 0;
+  transform: translateX(40px);
+  animation: deslizarTexto 2s ease forwards;
+  animation-delay: 2s; /* aparece después del título principal */
+}
+
+@keyframes deslizarTexto {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.direccion {
+  color: #0077cc; /* azul claro institucional */
+  opacity: 0;
+  animation: aparecerBrillo 2s ease forwards;
+  animation-delay: 3s; /* aparece después de los demás textos */
+}
+
+@keyframes aparecerBrillo {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(0, 119, 204, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: none;
+  }
+}
 
 
