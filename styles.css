@@ -25,7 +25,7 @@ body {
 }
 
 .contenido {
-    background-image:url('images/catedral.jpg'); 
+    background-image:url('images/CLocal.jpg'); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center; 
@@ -61,7 +61,7 @@ header .centro-local {
 
 header .direccion {
 
-     font-size: 0.7em;
+     font-size: 0.8em;
      margin: 0;
 }
 
@@ -193,7 +193,7 @@ identificacionSubmenu button {
   color: #000;
   text-align: center;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
   padding: 10px;
   animation: parpadeo 1s infinite;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -839,3 +839,584 @@ nav ul li ul.sub-submenu {
 }
 
 
+/* Submenú vertical para Fichas Académicas */
+.has-sub-submenu {
+  position: relative;
+}
+
+.has-sub-submenu > button {
+  width: 100%;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: normal;
+  transition: background 0.3s;
+}
+
+.has-sub-submenu > button:hover {
+  background-color: #0066cc;
+}
+
+.sub-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 260px;
+  background-color: #004aad;
+  border-radius: 0 10px 10px 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+/* Scroll vertical */
+.vertical-scroll {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+/* Estilo de botones internos */
+.sub-submenu li button {
+  width: 100%;
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.sub-submenu li button:hover {
+  background-color: #00aaff;
+}
+
+/* Mostrar submenú al pasar el cursor */
+.has-sub-submenu:hover .sub-submenu {
+  display: block;
+}
+
+
+
+/* Ajuste visual del submenú Fichas Académicas */
+.sub-submenu.vertical-scroll {
+  background-color: #004aad; /* mismo azul institucional */
+  padding: 10px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.sub-submenu.vertical-scroll button {
+  background-color: #007bff; /* azul brillante igual que los demás */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 6px auto;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 90%;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.sub-submenu.vertical-scroll button:hover {
+  background-color: #0056b3; /* tono más oscuro al pasar el mouse */
+  transform: scale(1.05);
+}
+
+
+/* Submenú Fichas Académicas */
+.has-sub-submenu > button#fichaAcademica {
+  background-color: #007bff; /* mismo azul que los botones de carreras */
+  color: white;
+  font-weight: normal;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  text-align: left;
+}
+
+.has-sub-submenu > button#fichaAcademica:hover {
+  background-color: #0056b3;
+}
+
+/* Fondo del submenú vertical (carreras) */
+.sub-submenu.vertical-scroll {
+  background: linear-gradient(180deg, #004aad 0%, #007bff 100%); /* degradado igual al menú principal */
+  padding: 12px;
+  border-radius: 10px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Botones de las carreras */
+.sub-submenu.vertical-scroll button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 6px auto;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 90%;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.sub-submenu.vertical-scroll button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
+/* Submenú Fichas Académicas y otros submenús verticales */
+.sub-submenu.vertical-scroll {
+  background-color:  #2f2f2f; /* azul igual al fondo de los submenús institucionales */
+  padding: 10px;
+  border-radius: 10px;
+  width: 240px; /* igual al tamaño del submenú Identificación */
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 0;
+}
+
+/* Botón del submenú principal (Ej: Fichas Académicas) */
+.has-sub-submenu > button#fichaAcademica {
+  background-color: #007bff; /* mismo azul brillante de los botones principales */
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  text-align: center;
+}
+
+.has-sub-submenu > button#fichaAcademica:hover {
+  background-color: #0056b3;
+}
+
+/* Botones internos de las carreras o asignaturas */
+.sub-submenu.vertical-scroll button {
+  background-color: #007bff; /* azul uniforme */
+  color: #fff;
+  border: 1px solid white;
+  padding: 8px 12px;
+  margin: 6px auto;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 90%;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.sub-submenu.vertical-scroll button:hover {
+  background-color: #0069d9;
+  transform: scale(1.05);
+}
+
+
+/* === Submenús generales (Identificación, Fichas Académicas, etc.) === */
+.submenu {
+  background-color: #333; /* fondo gris oscuro del contenedor */
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 240px;
+}
+
+/* === Botones principales del submenú (Identificación, Módulos, etc.) === */
+.submenu button {
+  background-color: #0066cc; /* azul institucional brillante */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 6px auto;
+  width: 90%;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: block;
+}
+
+.submenu button:hover {
+  background-color: #004c99; /* azul más oscuro al pasar el mouse */
+  transform: scale(1.05);
+}
+
+/* === Submenú vertical (para Fichas Académicas o carreras) === */
+.sub-submenu.vertical-scroll {
+  background-color: #333; /* igual al contenedor principal */
+  border-radius: 10px;
+  width: 240px;
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* === Botones internos del sub-submenú (asignaturas o carreras) === */
+.sub-submenu.vertical-scroll button {
+  background-color: #007bff; /* mismo azul que los demás botones */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 6px auto;
+  width: 90%;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+  display: block;
+}
+
+.sub-submenu.vertical-scroll button:hover {
+  background-color: #004c99;
+  transform: scale(1.05);
+}
+
+/* === Scrollbar personalizado === */
+.sub-submenu.vertical-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.sub-submenu.vertical-scroll::-webkit-scrollbar-thumb {
+  background-color: #0066cc;
+  border-radius: 4px;
+}
+
+/* === Fondo uniforme del submenú Identificación === */
+#identificacionSubmenu {
+  background-color: #0056b3 !important; /* mismo azul que el resto */
+  border-radius: 10px;
+  padding: 10px;
+  width: 240px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+#identificacionSubmenu button {
+  background-color: #007bff !important; /* azul brillante igual que los demás */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 6px auto;
+  border-radius: 6px;
+  width: 90%;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+#identificacionSubmenu button:hover {
+  background-color: #004c99 !important;
+  transform: scale(1.05);
+}
+
+/* === Centrar submenú Módulos === */
+#modulosSubmenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0056b3;
+  border-radius: 10px;
+  padding: 10px;
+  width: 240px;
+  margin: 0 auto; /* centra horizontalmente */
+  text-align: center;
+}
+
+#modulosSubmenu button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 6px auto;
+  border-radius: 6px;
+  width: 90%;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#modulosSubmenu button:hover {
+  background-color: #004c99;
+  transform: scale(1.05);
+}
+
+/* === UNIFICAR FONDO DEL SUBMENÚ "IDENTIFICACIÓN" === */
+.vertical-menu .has-sub-submenu > button {
+  background-color: #007bff !important; /* mismo azul que los demás botones */
+  color: white !important;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.vertical-menu .has-sub-submenu > button:hover {
+  background-color: #0056b3 !important;
+  transform: scale(1.05);
+}
+
+/* Fondo uniforme del submenú desplegable (lista interna) */
+.sub-submenu {
+  background-color:  #2e2e2e  !important; /* mismo tono gris-azulado que los otros */
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+/* Botones dentro del submenú Identificación */
+.sub-submenu button {
+  background-color: #007bff !important;
+  color: white !important;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  width: 90%;
+  margin: 5px auto;
+  display: block;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+.sub-submenu button:hover {
+  background-color: #0056b3 !important;
+  transform: scale(1.05);
+}
+
+/* === CENTRAR EL BOTÓN "MÓDULOS" === */
+#modulos {
+  display: block;
+  margin: 10px au
+  
+/* === CENTRAR CORRECTAMENTE EL BOTÓN "MÓDULOS" === */
+.vertical-menu li button#modulos {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #007bff !important;
+  color: white !important;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  width: 80%;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.vertical-menu li button#modulos:hover {
+  background-color: #0056b3 !important;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   FORZAR CENTRADO BOTÓN "MÓDULOS"
+   =========================== */
+
+/* 1) Asegura que el <li> padre actúe como contenedor centrado */
+nav ul.horizontal-menu li ul.vertical-menu > li {
+  display: block !important;
+  text-align: center !important; /* centro el contenido inline dentro del li */
+}
+
+/* 2) Regla muy específica para el botón #modulos */
+nav ul.horizontal-menu li ul.vertical-menu > li > button#modulos,
+nav ul.vertical-menu > li > button#modulos,
+.vertical-menu li button#modulos {
+  display: inline-block !important;     /* inline-block permite centrar con text-align */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+  width: 80% !important;                /* ajusta el ancho que quieras (80% funciona bien) */
+  max-width: 260px !important;          /* evita que se haga demasiado ancho */
+  min-width: 140px !important;          /* evita que quede muy pequeño en pantallas pequeñas */
+  text-align: center !important;
+  vertical-align: middle !important;
+  background-color: #007bff !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 10px 12px !important;
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+/* 3) Hover */
+nav ul.horizontal-menu li ul.vertical-menu > li > button#modulos:hover {
+  background-color: #0056b3 !important;
+  transform: scale(1.03) !important;
+}
+
+/* 4) Asegura que otras reglas (flex, paddings, etc.) no desplacen el botón */
+nav ul.horizontal-menu li ul.vertical-menu {
+  display: block !important;
+  padding-left: 0 !important;
+}
+
+/* 5) Ajuste alternativo si el li usa display:flex; forzamos centrado en ese caso */
+nav ul.horizontal-menu li ul.vertical-menu > li {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* 6) Mobile: mantener centrado */
+@media (max-width: 768px) {
+  nav ul.horizontal-menu li ul.vertical-menu > li > button#modulos {
+    width: 90% !important;
+    max-width: none !important;
+  }
+}
+
+/* === CENTRAR LOS BOTONES DEL SUBMENÚ "CARRERAS" === */
+nav ul.horizontal-menu li ul.vertical-menu {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;       /* 🔹 Centra todo horizontalmente */
+  justify-content: flex-start;
+  text-align: center;
+}
+
+/* Asegura que todos los botones dentro estén alineados igual */
+nav ul.horizontal-menu li ul.vertical-menu button {
+  width: 80% !important;     /* ancho uniforme */
+  margin: 6px auto !important;
+  display: block;
+  text-align: center;
+}
+
+/* Opcional: mantener estilo consistente */
+nav ul.horizontal-menu li ul.vertical-menu button:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* === CENTRAR CORRECTAMENTE EL BOTÓN "MÓDULOS" === */
+.vertical-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* centra horizontalmente todos los hijos */
+  justify-content: flex-start;
+}
+
+.vertical-menu li {
+  width: 100%;
+  text-align: center;
+}
+
+.vertical-menu li button {
+  display: block;
+  width: 80%;
+  margin: 6px auto;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.vertical-menu li button:hover {
+  background-color: #0056b3;
+}
+
+/* === UNIFICAR COLOR DE FONDO DE TODOS LOS SUBMENÚS === */
+nav ul ul {
+  background-color: #2e2e2e !important;  /* gris uniforme */
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.25);
+}
+
+/* === CENTRAR LOS BOTONES DEL SUBMENÚ VERTICAL === */
+nav ul ul ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+nav ul ul ul li {
+  width: 100%;
+  text-align: center;
+}
+
+nav ul ul ul li a {
+  display: inline-block;
+  width: 80%; /* controla el ancho del botón */
+  margin: 5px auto;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav ul ul ul li a:hover {
+  background-color: #0056b3;
+}
+
+/* === Uniformar grosor del texto de los botones del submenú === */
+.vertical-menu button {
+  font-weight: 500 !important; /* evita que se vea más grueso */
+  font-family: 'Roboto', sans-serif !important; /* asegura coherencia tipográfica */
+  color: #ffffff;
+}
+
+/* === UNIFICAR COLOR DE FONDO DE TODOS LOS SUBMENÚS === */
+.vertical-menu,
+.sub-submenu {
+  background-color: #2f2f2f !important; /* mismo tono gris oscuro que el resto */
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* === Asegurar color de texto uniforme === */
+.vertical-menu button,
+.sub-submenu button {
+  color: #ffffff !important;
+  font-weight: normal;
+}
+
+/* === Evitar que cambie el color de fondo al pasar el cursor === */
+.vertical-menu button:hover,
+.sub-submenu button:hover {
+  background-color: #007bff !important;
+  color: #fff !important;
+}
